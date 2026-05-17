@@ -1,30 +1,52 @@
-import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Anton, Bebas_Neue, Archivo } from 'next/font/google'
+import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
+const anton = Anton({
+  weight:   '400',
+  subsets:  ['latin'],
+  variable: '--font-anton',
+  display:  'swap',
+})
+
+const bebasNeue = Bebas_Neue({
+  weight:   '400',
+  subsets:  ['latin'],
+  variable: '--font-bebas',
+  display:  'swap',
+})
+
+const archivo = Archivo({
+  subsets:  ['latin'],
+  variable: '--font-archivo',
+  display:  'swap',
+})
 
 export const metadata: Metadata = {
-  title: "WildDog Events — Underground. Alive. Unstoppable.",
-  description:
-    "WildDog Events brings you the most immersive underground events in the scene. Dark. Energetic. Unforgettable.",
+  metadataBase: new URL('https://wilddogevents.com'),
+  title:       'Wild Dogs Events — Underground Backyard Ragers',
+  description: 'Underground backyard events engineered loud and built raw. Buy tickets, join the pack on Telegram and Discord.',
   openGraph: {
-    title: "WildDog Events",
-    description: "Underground. Alive. Unstoppable.",
-    type: "website",
+    title:       'Wild Dogs Events',
+    description: 'Buy tickets to the next run.',
+    url:         'https://wilddogevents.com',
+    siteName:    'Wild Dogs Events',
+    images:      [{ url: '/og.png', width: 1200, height: 630 }],
+    locale:      'en_CA',
+    type:        'website',
   },
-};
+  robots: { index: true, follow: true },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable}`}>
-      <body className="noise">{children}</body>
+    <html
+      lang="en"
+      className={`${anton.variable} ${bebasNeue.variable} ${archivo.variable}`}
+    >
+      <body className="bg-bg text-text">{children}</body>
     </html>
-  );
+  )
 }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 140" width="210" height="140">
+  <rect width="210" height="140" fill="white"/>
+  <!-- Mountains -->
+  <path d="M 10 130 L 55 58 L 78 92 L 105 30 L 132 92 L 155 58 L 200 130 Z" fill="black" opacity="0.9"/>
+  <!-- Wolf head -->
+  <path d="M 105 28 L 116 8 L 120 22 L 130 12 L 126 30 L 138 26 L 132 44 L 142 46 L 135 60 L 138 74 L 126 68 L 120 84 L 112 74 L 105 80 L 98 74 L 90 84 L 84 68 L 72 74 L 75 60 L 68 46 L 78 44 L 72 30 L 84 26 L 80 12 L 90 22 L 94 8 Z" fill="black"/>
+  <!-- Ears -->
+  <path d="M 88 14 L 80 0 L 72 18 Z" fill="black"/>
+  <path d="M 122 14 L 130 0 L 138 18 Z" fill="black"/>
+</svg>
